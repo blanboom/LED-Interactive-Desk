@@ -1,0 +1,1092 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Blanboom\Documents\GitHub\LEDInteractiveDesk\LEDInteractiveDesk.uvproj
+Project File Date:  10/17/2013
+
+<h2>Output:</h2>
+Build target 'Target 1'
+compiling main.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADCH
+Program Size: data=23.1 xdata=1086 code=2910
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 5 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling system.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 06D6H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 06DCH
+Program Size: data=17.0 xdata=1046 code=1760
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling system.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B49H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B4FH
+Program Size: data=23.1 xdata=1086 code=2899
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+compiling system.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B56H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B5CH
+Program Size: data=23.1 xdata=1086 code=2912
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(38): error C141: syntax error near 'AUXR'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B5DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B63H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B5DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B63H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B4DH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0B53H
+Program Size: data=23.1 xdata=1086 code=2903
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF6H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AE2H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF0H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF6H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADCH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF6H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF3H
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF6H
+Program Size: data=23.1 xdata=1086 code=2919
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADFH
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LIGHTUP
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AE7H
+Program Size: data=23.1 xdata=1087 code=2916
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 7 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+Code\main.c(17): error C267: 'lightUp': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling app.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADFH
+Program Size: data=23.1 xdata=1085 code=2922
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 4 Warning(s).
+compiling main.c...
+Code\main.c - 0 Error(s), 0 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0AF3H
+Program Size: data=23.1 xdata=1086 code=2923
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ADFH
+Program Size: data=23.1 xdata=1086 code=2923
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+Program Size: data=23.1 xdata=1086 code=2920
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LEDPROCESS?APP
+*** WARNING L1: UNRESOLVED EXTERNAL SYMBOL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+*** WARNING L2: REFERENCE MADE TO UNRESOLVED EXTERNAL
+    SYMBOL:  LEDPROCESS
+    MODULE:  .\Output\main.obj (MAIN)
+    ADDRESS: 0ABDH
+Program Size: data=23.1 xdata=1087 code=2930
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 5 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+Code\main.c(17): error C267: 'ledProcess': requires ANSI-style prototype
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling app.c...
+Code\app.c(73): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_LIGHTUP?APP
+Program Size: data=23.1 xdata=1086 code=2938
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2947
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2929
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2938
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2938
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2952
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2955
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2972
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2980
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.1 xdata=1084 code=2978
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2989
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2991
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2991
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2994
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2980
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=2980
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1084 code=3000
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1084 code=2971
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1084 code=3019
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3093
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3132
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3132
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3132
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3132
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(87): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=1092 code=3164
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(83): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3112
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(84): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1093 code=3111
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1093 code=3128
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1094 code=3155
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1094 code=3167
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1094 code=3167
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3089
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(52): warning C280: 'i': unreferenced local variable
+Code\app.c(85): warning C235: parameter 1: different types
+Code\app.c(97): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+Code\app.c(96): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1093 code=2889
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+Code\app.c(85): warning C280: 'bri': unreferenced local variable
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1093 code=2897
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2899
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2899
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(78): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(84): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3001
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3029
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2945
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2945
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3029
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2945
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2945
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2946
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(88): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2952
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2993
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2959
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3042
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3042
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2958
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=2930
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3014
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3102
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3102
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3102
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3102
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3102
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(82): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=1092 code=3103
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).

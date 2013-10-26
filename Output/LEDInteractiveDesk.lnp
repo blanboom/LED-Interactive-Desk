@@ -1,0 +1,6 @@
+".\Output\STARTUP.obj",
+".\Output\main.obj",
+".\Output\system.obj",
+".\Output\app.obj" 
+TO ".\Output\LEDInteractiveDesk" 
+PRINT(".\Output\LEDInteractiveDesk.m51") RAMSIZE(256) 

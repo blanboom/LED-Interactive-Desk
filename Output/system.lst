@@ -1,4 +1,4 @@
-C51 COMPILER V9.51   SYSTEM                                                                10/26/2013 18:12:14 PAGE 1   
+C51 COMPILER V9.51   SYSTEM                                                                10/26/2013 23:41:20 PAGE 1   
 
 
 C51 COMPILER V9.51, COMPILATION OF MODULE SYSTEM
@@ -62,7 +62,7 @@ line level    source
   52          //////////////////////////////////////////////////////////////
   53          //  ADC
   54          
-C51 COMPILER V9.51   SYSTEM                                                                10/26/2013 18:12:14 PAGE 2   
+C51 COMPILER V9.51   SYSTEM                                                                10/26/2013 23:41:20 PAGE 2   
 
   55          /*Define ADC operation const for ADC_CONTR*/
   56          #define ADC_POWER 0x80 //ADC power control bit

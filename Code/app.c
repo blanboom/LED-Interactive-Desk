@@ -7,22 +7,7 @@ uint8 pwmTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // PWM 计时
 uint8 ledMode = 0;      // LED 模式
 uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
 
-//  LED 模式
-//  数值代表亮度，范围：0 ~ 255
-//  第一个数代表后面每个亮度的持续时间，单位为 20ms
-uint8 ledProgram[4][256]=
-{
-	{8,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 立即灭掉
-	{100,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 持续 2 秒
-	{100,255,245,235,225,215,
-			 205,195,185,175,165,
-			 155,145,135,125,115,
-			 95,85,65,35,0},  // 逐渐变暗，2 秒
-	{100,255,245,235,225,215,
-			 205,195,185,175,165,
-			 155,145,135,125,115,
-			 95, 75, 35, 255, 0},  // 变暗后闪烁一次，共 2 秒
-};
+uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   
 
 void init()
 {
@@ -62,7 +47,7 @@ void lightUp(pin)
 void ledPWM(uint8 pin, uint8 brightness)
 {
 	pwmTime[pin] = pwmTime[pin] + 1;
-	if(pwmTime[pin] >= 256)
+	if(pwmTime[pin] >= 20)
 	{
 		pwmTime[pin] = 0;
 	}
@@ -76,23 +61,66 @@ void ledPWM(uint8 pin, uint8 brightness)
 	}
 }
 
+void ledBlink(pin)
+{
+	blinkCounter[pin] = blinkCounter[pin] + 1;
+	if(blinkCounter[pin] == 100)
+	{
+		P2 |= 0x01 << pin;
+	}
+	if(blinkCounter[pin] == 112)
+	{
+		P2 &= 0xfe << pin;
+	}
+	if(blinkCounter[pin] >= 200)
+	{
+		blinkCounter[pin] = 0;
+	}
+}
+	
 // LED 处理
 // 到达指定的时间调节 LED 亮度
 void ledProcess(uint8 pin)
 {
-	/*
-	if(ledTime[pin] != 0)
-	{
-		ledPWM(pin, (375-ledTime[pin]) / 6);
+	switch (ledMode)
+	{		
+		
+	case 0 :
+			// 渐变
+			if(ledTime[pin] != 0)
+			{
+				ledPWM(pin, (260-ledTime[pin]) / 13);
+			}
+			break;
+			
+	case 1:
+			// 灯亮一定时间后灭
+			if(ledTime[pin] != 0)
+			{
+				P2 |= 0x01 << pin;
+			}
+			break;
+			
+	case 2:
+			// 快速闪烁
+			if(ledTime[pin] != 0)
+			{
+				ledBlink(pin);
+			}
+			break;
+			
+	case 3:
+			// 手放在灯上面，灯就亮
+			if(ledTime[pin] == 1 )
+			{
+				P2 |= 0x01 << pin;
+			}
+			else
+			{
+				ledTime[pin] = 261;
+			}
 	}
-	*/
-	
-	
-	if(((ledTime[pin] - 1) % ledProgram[ledMode][0]) == 0)
-	{
-		ledPWM(pin, ledProgram[ledMode][(ledTime[pin] - 1) / ledProgram[ledMode][0]]);
-	}
-	
+
 }
 
 // 按键处理
@@ -131,7 +159,7 @@ void ledTimeUpdate() interrupt 1 using 1
 		if(ledTime[i] != 0)
 		{
 			ledTime[i] = ledTime[i] + 1;
-			if(ledTime[i] == 375)
+			if(ledTime[i] >= 260)
 			{
 				ledTime[i] = 0;
 				P2 &= 0xfe << i;

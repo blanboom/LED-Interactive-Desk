@@ -6,6 +6,7 @@
 int main()
 {
 	uint8 i;
+	
 	init();
 	
 	while(1)

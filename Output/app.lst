@@ -1,4 +1,4 @@
-C51 COMPILER V9.51   APP                                                                   10/26/2013 21:35:45 PAGE 1   
+C51 COMPILER V9.51   APP                                                                   10/27/2013 00:22:07 PAGE 1   
 
 
 C51 COMPILER V9.51, COMPILATION OF MODULE APP
@@ -17,149 +17,196 @@ line level    source
    7          uint8 ledMode = 0;      // LED 模式
    8          uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
    9          
-  10          //  LED 模式
-  11          //  数值代表亮度，范围：0 ~ 255
-  12          //  第一个数代表后面每个亮度的持续时间，单位为 20ms
-  13          uint8 ledProgram[4][256]=
-  14          {
-  15            {8,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 立即灭掉
-  16            {100,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 持续 2 秒
-  17            {100,255,245,235,225,215,
-  18                 205,195,185,175,165,
-  19                 155,145,135,125,115,
-  20                 95,85,65,35,0},  // 逐渐变暗，2 秒
-  21            {100,255,245,235,225,215,
-  22                 205,195,185,175,165,
-  23                 155,145,135,125,115,
-  24                 95, 75, 35, 255, 0},  // 变暗后闪烁一次，共 2 秒
-  25          };
-  26          
-  27          void init()
-  28          {
-  29   1        initUart();
-  30   1        initADC();
-  31   1        
-  32   1        KEY = !KEY_PRESSED;
-  33   1        P2 = 0x00;
-  34   1        P2M0 = 0xff;
-  35   1        P2M1 = 0x00;
-  36   1        
-  37   1        // 初始化 LED 计时器（定时器 0）
-  38   1        AUXR |= 0x80;  // 定时器 0：1T 模式
-  39   1        TMOD = 0x03;   // 定时器 0 模式 3
-  40   1        TL0 = T20MS;   // 装入时间：20ms
-  41   1        TH0 = T20MS >> 8;
-  42   1        TR0 = 1;       // 开始计时
-  43   1        ET0 = 1;       // 使能定时器 0 在模式 3 下的中断
-  44   1        
-  45   1        
-  46   1        printf("LED Interactive Desk\nby xiao3d and Blanboom\nhttp://blanboom.org\n");
-  47   1      }
-  48          
-  49          // 启动 LED
-  50          void lightUp(pin)
-  51          {
-  52   1        uint8 result;
-  53   1        P1 = 0x01 << pin;
-  54   1        result = getADCResult(pin);
-C51 COMPILER V9.51   APP                                                                   10/26/2013 21:35:45 PAGE 2   
+  10          uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   
+  11          
+  12          //  LED 模式
+  13          //  数值代表亮度，范围：0 ~ 255
+  14          //  第一个数代表后面每个亮度的持续时间，单位为 20ms
+  15          uint8 ledProgram[4][256]=
+  16          {
+  17            {8,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 立即灭掉
+  18            {100,255,0,0,0,0,0,0,0,0,0,0,0,0},  // 持续 2 秒
+  19            {100,255,245,235,225,215,
+  20                 205,195,185,175,165,
+  21                 155,145,135,125,115,
+  22                 95,85,65,35,0},  // 逐渐变暗，2 秒
+  23            {100,255,245,235,225,215,
+  24                 205,195,185,175,165,
+  25                 155,145,135,125,115,
+  26                 95, 75, 35, 255, 0},  // 变暗后闪烁一次，共 2 秒
+  27          };
+  28          
+  29          void init()
+  30          {
+  31   1        initUart();
+  32   1        initADC();
+  33   1        
+  34   1        KEY = !KEY_PRESSED;
+  35   1        P2 = 0x00;
+  36   1        P2M0 = 0xff;
+  37   1        P2M1 = 0x00;
+  38   1        
+  39   1        // 初始化 LED 计时器（定时器 0）
+  40   1        AUXR |= 0x80;  // 定时器 0：1T 模式
+  41   1        TMOD = 0x03;   // 定时器 0 模式 3
+  42   1        TL0 = T20MS;   // 装入时间：20ms
+  43   1        TH0 = T20MS >> 8;
+  44   1        TR0 = 1;       // 开始计时
+  45   1        ET0 = 1;       // 使能定时器 0 在模式 3 下的中断
+  46   1        
+  47   1        
+  48   1        printf("LED Interactive Desk\nby xiao3d and Blanboom\nhttp://blanboom.org\n");
+  49   1      }
+  50          
+  51          // 启动 LED
+  52          void lightUp(pin)
+  53          {
+  54   1        uint8 result;
+C51 COMPILER V9.51   APP                                                                   10/27/2013 00:22:07 PAGE 2   
 
-  55   1        if (result > 30)
-  56   1        {
-  57   2          ledTime[pin] = 1;
-  58   2        }
-  59   1      }
-  60          
-  61          // LED 的 PWM 控制程序
-  62          void ledPWM(uint8 pin, uint8 brightness)
-  63          {
-  64   1        pwmTime[pin] = pwmTime[pin] + 1;
-  65   1        if(pwmTime[pin] >= 256)
-  66   1        {
-  67   2          pwmTime[pin] = 0;
-  68   2        }
-  69   1        if(pwmTime[pin] <= brightness)
-  70   1        {
-  71   2          P2 |= 0x01 << pin;
-  72   2        }
-  73   1        if(pwmTime[pin] > brightness)
-  74   1        {
-  75   2          P2 &= 0xfe << pin;
-  76   2        }
-  77   1      }
-  78          
-  79          // LED 处理
-  80          // 到达指定的时间调节 LED 亮度
-  81          void ledProcess(uint8 pin)
+  55   1        P1 = 0x01 << pin;
+  56   1        result = getADCResult(pin);
+  57   1        if (result > 30)
+  58   1        {
+  59   2          ledTime[pin] = 1;
+  60   2        }
+  61   1      }
+  62          
+  63          // LED 的 PWM 控制程序
+  64          void ledPWM(uint8 pin, uint8 brightness)
+  65          {
+  66   1        pwmTime[pin] = pwmTime[pin] + 1;
+  67   1        if(pwmTime[pin] >= 20)
+  68   1        {
+  69   2          pwmTime[pin] = 0;
+  70   2        }
+  71   1        if(pwmTime[pin] <= brightness)
+  72   1        {
+  73   2          P2 |= 0x01 << pin;
+  74   2        }
+  75   1        if(pwmTime[pin] > brightness)
+  76   1        {
+  77   2          P2 &= 0xfe << pin;
+  78   2        }
+  79   1      }
+  80          
+  81          void ledBlink(pin)
   82          {
-*** WARNING C235 IN LINE 82 OF Code\app.c: parameter 1: different types
-  83   1        /*
-  84   1        if(ledTime[pin] != 0)
+  83   1        blinkCounter[pin] = blinkCounter[pin] + 1;
+  84   1        if(blinkCounter[pin] == 100)
   85   1        {
-  86   1          ledPWM(pin, (375-ledTime[pin]) / 6);
-  87   1        }
-  88   1        */
-  89   1        
-  90   1        
-  91   1        if(((ledTime[pin] - 1) % ledProgram[ledMode][0]) == 0)
-  92   1        {
-  93   2          ledPWM(pin, ledProgram[ledMode][(ledTime[pin] - 1) / ledProgram[ledMode][0]]);
-  94   2        }
-  95   1        
+  86   2          P2 |= 0x01 << pin;
+  87   2        }
+  88   1        if(blinkCounter[pin] == 112)
+  89   1        {
+  90   2          P2 &= 0xfe << pin;
+  91   2        }
+  92   1        if(blinkCounter[pin] >= 200)
+  93   1        {
+  94   2          blinkCounter[pin] = 0;
+  95   2        }
   96   1      }
-  97          
-  98          // 按键处理
-  99          void keyProcess()
- 100          {
- 101   1        static uint16 keyTime = 0;
- 102   1        static bit keyLock = 0;
- 103   1        if(KEY == KEY_PRESSED)
- 104   1        {
- 105   2          keyTime++;
- 106   2          if(keyTime <= 200 && keyLock == 0)
- 107   2          {
- 108   3            ledMode++;
- 109   3            if(ledMode > LED_MODE_NUM - 1)
- 110   3            {
- 111   4              ledMode = 0;
- 112   4            }
- 113   3            keyLock = 1;
- 114   3          }
- 115   2        }
-C51 COMPILER V9.51   APP                                                                   10/26/2013 21:35:45 PAGE 3   
+  97            
+  98          // LED 处理
+  99          // 到达指定的时间调节 LED 亮度
+ 100          void ledProcess(uint8 pin)
+ 101          {
+*** WARNING C235 IN LINE 101 OF Code\app.c: parameter 1: different types
+ 102   1        switch (ledMode)
+ 103   1        {   
+ 104   2          
+ 105   2        case 0 :
+ 106   2            // 渐变
+ 107   2            if(ledTime[pin] != 0)
+ 108   2            {
+ 109   3              ledPWM(pin, (260-ledTime[pin]) / 13);
+ 110   3            }
+ 111   2            break;
+ 112   2            
+ 113   2        case 1:
+ 114   2            // 灯亮一定时间后灭
+ 115   2            if(ledTime[pin] != 0)
+C51 COMPILER V9.51   APP                                                                   10/27/2013 00:22:07 PAGE 3   
 
- 116   1        if(keyTime > 200)
- 117   1        {
- 118   2          if(KEY != KEY_PRESSED)
- 119   2          {
- 120   3            keyTime = 0;
- 121   3            keyLock = 0;
- 122   3          }
- 123   2        }
- 124   1      }
- 125            
- 126          void ledTimeUpdate() interrupt 1 using 1
- 127          {
- 128   1        uint8 i;
- 129   1        for(i = 0; i <= 7; i++)
- 130   1        {
- 131   2          if(ledTime[i] != 0)
- 132   2          {
- 133   3            ledTime[i] = ledTime[i] + 1;
- 134   3            if(ledTime[i] == 375)
- 135   3            {
- 136   4              ledTime[i] = 0;
- 137   4              P2 &= 0xfe << i;
- 138   4            }
- 139   3          }
- 140   2        }
+ 116   2            {
+ 117   3              P2 |= 0x01 << pin;
+ 118   3            }
+ 119   2            break;
+ 120   2            
+ 121   2        case 2:
+ 122   2            // 快速闪烁
+ 123   2            if(ledTime[pin] != 0)
+ 124   2            {
+ 125   3              ledBlink(pin);
+ 126   3            }
+ 127   2            break;
+ 128   2            
+ 129   2        case 3:
+ 130   2            // 手放在灯上面，灯就亮
+ 131   2            if(ledTime[pin] == 1 )
+ 132   2            {
+ 133   3              P2 |= 0x01 << pin;
+ 134   3            }
+ 135   2            else
+ 136   2            {
+ 137   3              ledTime[pin] = 261;
+ 138   3            }
+ 139   2        }
+ 140   1      
  141   1      }
+ 142          
+ 143          // 按键处理
+ 144          void keyProcess()
+ 145          {
+ 146   1        static uint16 keyTime = 0;
+ 147   1        static bit keyLock = 0;
+ 148   1        if(KEY == KEY_PRESSED)
+ 149   1        {
+ 150   2          keyTime++;
+ 151   2          if(keyTime <= 200 && keyLock == 0)
+ 152   2          {
+ 153   3            ledMode++;
+ 154   3            if(ledMode > LED_MODE_NUM - 1)
+ 155   3            {
+ 156   4              ledMode = 0;
+ 157   4            }
+ 158   3            keyLock = 1;
+ 159   3          }
+ 160   2        }
+ 161   1        if(keyTime > 200)
+ 162   1        {
+ 163   2          if(KEY != KEY_PRESSED)
+ 164   2          {
+ 165   3            keyTime = 0;
+ 166   3            keyLock = 0;
+ 167   3          }
+ 168   2        }
+ 169   1      }
+ 170            
+ 171          void ledTimeUpdate() interrupt 1 using 1
+ 172          {
+ 173   1        uint8 i;
+ 174   1        for(i = 0; i <= 7; i++)
+ 175   1        {
+ 176   2          if(ledTime[i] != 0)
+ 177   2          {
+C51 COMPILER V9.51   APP                                                                   10/27/2013 00:22:07 PAGE 4   
+
+ 178   3            ledTime[i] = ledTime[i] + 1;
+ 179   3            if(ledTime[i] >= 260)
+ 180   3            {
+ 181   4              ledTime[i] = 0;
+ 182   4              P2 &= 0xfe << i;
+ 183   4            }
+ 184   3          }
+ 185   2        }
+ 186   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    519    ----
+   CODE SIZE        =    713    ----
    CONSTANT SIZE    =     65    ----
-   XDATA SIZE       =   1051       2
+   XDATA SIZE       =   1067       3
    PDATA SIZE       =   ----    ----
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----

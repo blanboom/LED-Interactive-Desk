@@ -7,3 +7,111 @@ C:\Users\Blanboom\Documents\GitHub\LED-Interactive-Desk\LEDInteractiveDesk.uvpro
 Project File Date:  10/17/2013
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2297
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling main.c...
+Code\main.c(23): error C202: 'ledTime': undefined identifier
+Code\main.c(23): error C141: syntax error near ';'
+Target not created
+Build target 'Target 1'
+compiling main.c...
+Code\main.c(23): error C202: 'ledTime': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling main.c...
+compiling app.c...
+Code\app.c(44): error C202: 'i': undefined identifier
+Code\app.c(46): error C202: 'i': undefined identifier
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(44): error C141: syntax error near 'int'
+Code\app.c(44): error C202: 'i': undefined identifier
+Code\app.c(44): error C202: 'i': undefined identifier
+Code\app.c(44): error C202: 'i': undefined identifier
+Code\app.c(44): error C141: syntax error near ')'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(90): warning C235: parameter 1: different types
+linking...
+Program Size: data=23.2 xdata=84 code=2361
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 1 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(37): warning C280: 'i': unreferenced local variable
+Code\app.c(86): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2314
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 3 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2314
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2303
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2320
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+Code\app.c(115): error C141: syntax error near '}'
+Target not created
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2302
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2302
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2282
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).

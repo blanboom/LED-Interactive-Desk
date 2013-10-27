@@ -37,7 +37,7 @@ void lightUp(pin)
 	uint8 result;
 	P1 = 0x01 << pin;
 	result = getADCResult(pin);
-	if (result > 30)
+	if (result > 50)
 	{
 		ledTime[pin] = 1;
 	}
@@ -61,6 +61,7 @@ void ledPWM(uint8 pin, uint8 brightness)
 	}
 }
 
+// LED 闪烁
 void ledBlink(pin)
 {
 	blinkCounter[pin] = blinkCounter[pin] + 1;
@@ -110,14 +111,14 @@ void ledProcess(uint8 pin)
 			break;
 			
 	case 3:
-			// 手放在灯上面，灯就亮
-			if(ledTime[pin] == 1 )
+			// 手放上去灯灭
+			if(ledTime[pin] == 0)
 			{
 				P2 |= 0x01 << pin;
 			}
 			else
 			{
-				ledTime[pin] = 261;
+				P2 &= 0xfe << pin;
 			}
 	}
 

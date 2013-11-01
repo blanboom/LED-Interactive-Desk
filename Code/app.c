@@ -132,7 +132,7 @@ void keyProcess()
 	if(KEY == KEY_PRESSED)
 	{
 		keyTime++;
-		if(keyTime <= 200 && keyLock == 0)
+		if(keyTime >= 1000 && keyLock == 0)
 		{
 			ledMode++;
 			if(ledMode > LED_MODE_NUM - 1)
@@ -142,7 +142,7 @@ void keyProcess()
 			keyLock = 1;
 		}
 	}
-	if(keyTime > 200)
+	if(keyTime > 2000)
 	{
 		if(KEY != KEY_PRESSED)
 		{

@@ -1,4 +1,4 @@
-C51 COMPILER V9.51   APP                                                                   10/27/2013 12:40:15 PAGE 1   
+C51 COMPILER V9.51   APP                                                                   11/01/2013 21:43:07 PAGE 1   
 
 
 C51 COMPILER V9.51, COMPILATION OF MODULE APP
@@ -62,7 +62,7 @@ line level    source
   52   2          pwmTime[pin] = 0;
   53   2        }
   54   1        if(pwmTime[pin] <= brightness)
-C51 COMPILER V9.51   APP                                                                   10/27/2013 12:40:15 PAGE 2   
+C51 COMPILER V9.51   APP                                                                   11/01/2013 21:43:07 PAGE 2   
 
   55   1        {
   56   2          P2 |= 0x01 << pin;
@@ -126,7 +126,7 @@ line level    source
  113   2        case 3:
  114   2            // 手放上去灯灭
  115   2            if(ledTime[pin] == 0)
-C51 COMPILER V9.51   APP                                                                   10/27/2013 12:40:15 PAGE 3   
+C51 COMPILER V9.51   APP                                                                   11/01/2013 21:43:07 PAGE 3   
 
  116   2            {
  117   3              P2 |= 0x01 << pin;
@@ -147,7 +147,7 @@ line level    source
  132   1        if(KEY == KEY_PRESSED)
  133   1        {
  134   2          keyTime++;
- 135   2          if(keyTime <= 200 && keyLock == 0)
+ 135   2          if(keyTime >= 1000 && keyLock == 0)
  136   2          {
  137   3            ledMode++;
  138   3            if(ledMode > LED_MODE_NUM - 1)
@@ -157,7 +157,7 @@ line level    source
  142   3            keyLock = 1;
  143   3          }
  144   2        }
- 145   1        if(keyTime > 200)
+ 145   1        if(keyTime > 2000)
  146   1        {
  147   2          if(KEY != KEY_PRESSED)
  148   2          {
@@ -186,11 +186,11 @@ line level    source
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    707    ----
+   CODE SIZE        =    708    ----
    CONSTANT SIZE    =     65    ----
    XDATA SIZE       =     43       3
    PDATA SIZE       =   ----    ----
-C51 COMPILER V9.51   APP                                                                   10/27/2013 12:40:15 PAGE 4   
+C51 COMPILER V9.51   APP                                                                   11/01/2013 21:43:07 PAGE 4   
 
    DATA SIZE        =   ----    ----
    IDATA SIZE       =   ----    ----

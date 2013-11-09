@@ -37,7 +37,7 @@ void lightUp(pin)
 	uint8 result;
 	P1 = 0x01 << pin;
 	result = getADCResult(pin);
-	if (result > 50)
+	if (result > 90)
 	{
 		ledTime[pin] = 1;
 	}
@@ -65,15 +65,15 @@ void ledPWM(uint8 pin, uint8 brightness)
 void ledBlink(pin)
 {
 	blinkCounter[pin] = blinkCounter[pin] + 1;
-	if(blinkCounter[pin] == 100)
+	if(blinkCounter[pin] == 200)
 	{
 		P2 |= 0x01 << pin;
 	}
-	if(blinkCounter[pin] == 112)
+	if(blinkCounter[pin] == 224)
 	{
 		P2 &= 0xfe << pin;
 	}
-	if(blinkCounter[pin] >= 200)
+	if(blinkCounter[pin] >= 400)
 	{
 		blinkCounter[pin] = 0;
 	}

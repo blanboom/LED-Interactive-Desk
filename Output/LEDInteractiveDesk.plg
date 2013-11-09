@@ -7,3 +7,12 @@ C:\Users\Blanboom\Documents\GitHub\LED-Interactive-Desk\LEDInteractiveDesk.uvpro
 Project File Date:  10/17/2013
 
 <h2>Output:</h2>
+Build target 'Target 1'
+compiling app.c...
+Code\app.c(85): warning C235: parameter 1: different types
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_SENDDATA?SYSTEM
+Program Size: data=23.2 xdata=84 code=2283
+creating hex file from ".\Output\LEDInteractiveDesk"...
+".\Output\LEDInteractiveDesk" - 0 Error(s), 2 Warning(s).

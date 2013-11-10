@@ -6,6 +6,7 @@
 uint8 pwmTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // PWM 计时
 uint8 ledMode = 0;      // LED 模式
 uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
+int8 code ledSensitivityAdjust[8] = {0, 0, -20, -20, 0, 0, 0, -20};  //灵敏度校正
 
 uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   
 
@@ -37,7 +38,7 @@ void lightUp(pin)
 	uint8 result;
 	P1 = 0x01 << pin;
 	result = getADCResult(pin);
-	if (result > 60)
+	if (result > (60 + ledSensitivityAdjust[pin]))
 	{
 		ledTime[pin] = 1;
 	}

@@ -5,6 +5,7 @@
 
 typedef unsigned char uint8;
 typedef unsigned int uint16;
+typedef int int8;
 
 
 

@@ -6,7 +6,7 @@
 
 #define T20MS (65536 - FOSC / 50)    // 定时器时间
 
-#define LED_MODE_NUM 4 // LED 模式数量
+#define LED_MODE_NUM 6 // LED 模式数量
 
 //  按键
 sbit KEY = P3^2;

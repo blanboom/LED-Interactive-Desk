@@ -1,9 +1,9 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        11/09/2013  14:43:00  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        11/10/2013  13:25:21  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
-C:\PROGRAM FILES (X86)\KEIL\C51\BIN\BL51.EXE .\Output\STARTUP.obj, .\Output\main.obj, .\Output\system.obj, .\Output\app.
->> obj TO .\Output\LEDInteractiveDesk PRINT (.\Output\LEDInteractiveDesk.m51) RAMSIZE (256)
+D:\PROGRAM FILES\KELL\C51\BIN\BL51.EXE .\Output\STARTUP.obj, .\Output\main.obj, .\Output\system.obj, .\Output\app.obj TO
+>>  .\Output\LEDInteractiveDesk PRINT (.\Output\LEDInteractiveDesk.m51) RAMSIZE (256)
 
 
 MEMORY MODEL: LARGE
@@ -14,17 +14,17 @@ INPUT MODULES INCLUDED:
   .\Output\main.obj (MAIN)
   .\Output\system.obj (SYSTEM)
   .\Output\app.obj (APP)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C_INIT)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?UIDIV)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?IILDX)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (PRINTF)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?CLDPTR)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?CLDOPTR)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?CSTPTR)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?PLDIXDATA)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?PSTXDATA)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (?C?CCASE)
-  C:\PROGRAM FILES (X86)\KEIL\C51\LIB\C51L.LIB (PUTCHAR)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C_INIT)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?UIDIV)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?IILDX)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (PRINTF)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?CLDPTR)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?CLDOPTR)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?CSTPTR)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?PLDIXDATA)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?PSTXDATA)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (?C?CCASE)
+  D:\PROGRAM FILES\KELL\C51\LIB\C51L.LIB (PUTCHAR)
 
 
 LINK MAP OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
@@ -52,26 +52,28 @@ LINK MAP OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
             CODE    0003H     0008H     UNIT         ?PR?_SENDDATA?SYSTEM
             CODE    000BH     0003H     ABSOLUTE     
             CODE    000EH     0365H     UNIT         ?PR?PRINTF?PRINTF
-            CODE    0373H     0109H     UNIT         ?C?LIB_CODE
-            CODE    047CH     00C3H     UNIT         ?PR?_LEDPROCESS?APP
-            CODE    053FH     008CH     UNIT         ?C_C51STARTUP
-            CODE    05CBH     007FH     UNIT         ?PR?_LEDBLINK?APP
-            CODE    064AH     007AH     UNIT         ?PR?LEDTIMEUPDATE?APP
-            CODE    06C4H     0059H     UNIT         ?PR?_LEDPWM?APP
-            CODE    071DH     004CH     UNIT         ?PR?KEYPROCESS?APP
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 2
+            CODE    0373H     010DH     UNIT         ?PR?_LEDPROCESS?APP
+            CODE    0480H     0109H     UNIT         ?C?LIB_CODE
+            CODE    0589H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0615H     0081H     UNIT         ?PR?_LEDBLINK3?APP
+            CODE    0696H     007FH     UNIT         ?PR?_LEDBLINK1?APP
+            CODE    0715H     007FH     UNIT         ?PR?_LEDBLINK2?APP
+            CODE    0794H     007AH     UNIT         ?PR?LEDTIMEUPDATE?APP
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 2
 
 
-            CODE    0769H     0041H     UNIT         ?CO?APP
-            CODE    07AAH     003DH     UNIT         ?C_INITSEG
-            CODE    07E7H     003BH     UNIT         ?PR?_LIGHTUP?APP
-            CODE    0822H     002CH     UNIT         ?PR?MAIN?MAIN
-            CODE    084EH     0028H     UNIT         ?PR?INIT?APP
-            CODE    0876H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
-            CODE    089DH     001BH     UNIT         ?PR?_DELAY?SYSTEM
-            CODE    08B8H     0014H     UNIT         ?PR?_GETADCRESULT?SYSTEM
-            CODE    08CCH     0010H     UNIT         ?PR?INITUART?SYSTEM
-            CODE    08DCH     000FH     UNIT         ?PR?INITADC?SYSTEM
+            CODE    080EH     0059H     UNIT         ?PR?_LEDPWM?APP
+            CODE    0867H     004EH     UNIT         ?PR?KEYPROCESS?APP
+            CODE    08B5H     0041H     UNIT         ?CO?APP
+            CODE    08F6H     003DH     UNIT         ?C_INITSEG
+            CODE    0933H     003BH     UNIT         ?PR?_LIGHTUP?APP
+            CODE    096EH     002CH     UNIT         ?PR?MAIN?MAIN
+            CODE    099AH     0028H     UNIT         ?PR?INIT?APP
+            CODE    09C2H     0027H     UNIT         ?PR?PUTCHAR?PUTCHAR
+            CODE    09E9H     001BH     UNIT         ?PR?_DELAY?SYSTEM
+            CODE    0A04H     0014H     UNIT         ?PR?_GETADCRESULT?SYSTEM
+            CODE    0A18H     0010H     UNIT         ?PR?INITUART?SYSTEM
+            CODE    0A28H     000FH     UNIT         ?PR?INITADC?SYSTEM
 
 
 
@@ -108,20 +110,22 @@ SEGMENT                             BIT_GROUP          DATA_GROUP          XDATA
 
 ?PR?_LEDPROCESS?APP              -----    -----      -----    -----      002CH    0001H
   +--> ?PR?_LEDPWM?APP
-  +--> ?PR?_LEDBLINK?APP
+  +--> ?PR?_LEDBLINK1?APP
+  +--> ?PR?_LEDBLINK2?APP
+  +--> ?PR?_LEDBLINK3?APP
 
 
 
 SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
 
   VALUE           TYPE          NAME
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 3
+
+
   ----------------------------------
 
   -------         MODULE        ?C_STARTUP
-  C:053FH         SEGMENT       ?C_C51STARTUP
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 3
-
-
+  C:0589H         SEGMENT       ?C_C51STARTUP
   I:0022H         SEGMENT       ?STACK
   C:0000H         PUBLIC        ?C_STARTUP
   D:00E0H         SYMBOL        ACC
@@ -131,7 +135,7 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   N:0000H         SYMBOL        IBPSTACK
   N:0100H         SYMBOL        IBPSTACKTOP
   N:0080H         SYMBOL        IDATALEN
-  C:0542H         SYMBOL        IDATALOOP
+  C:058CH         SYMBOL        IDATALOOP
   N:0000H         SYMBOL        PBPSTACK
   N:0100H         SYMBOL        PBPSTACKTOP
   N:0000H         SYMBOL        PDATALEN
@@ -140,18 +144,18 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   N:0000H         SYMBOL        PPAGEENABLE
   D:00A0H         SYMBOL        PPAGE_SFR
   D:0081H         SYMBOL        SP
-  C:053FH         SYMBOL        STARTUP1
+  C:0589H         SYMBOL        STARTUP1
   N:0000H         SYMBOL        XBPSTACK
   N:0000H         SYMBOL        XBPSTACKTOP
   N:0000H         SYMBOL        XDATALEN
   N:0000H         SYMBOL        XDATASTART
   C:0000H         LINE#         126
-  C:053FH         LINE#         133
-  C:0541H         LINE#         134
-  C:0542H         LINE#         135
-  C:0543H         LINE#         136
-  C:0545H         LINE#         185
-  C:0548H         LINE#         196
+  C:0589H         LINE#         133
+  C:058BH         LINE#         134
+  C:058CH         LINE#         135
+  C:058DH         LINE#         136
+  C:058FH         LINE#         185
+  C:0592H         LINE#         196
   -------         ENDMOD        ?C_STARTUP
 
   -------         MODULE        MAIN
@@ -167,7 +171,7 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
   D:00D8H         PUBLIC        CCON
-  C:0822H         PUBLIC        main
+  C:096EH         PUBLIC        main
   D:0098H         PUBLIC        SCON
   D:0088H         PUBLIC        TCON
   D:00D0H         PUBLIC        PSW
@@ -175,27 +179,27 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   -------         DO            
   X:002BH         SYMBOL        i
   -------         ENDDO         
-  C:0822H         LINE#         6
-  C:0822H         LINE#         7
-  C:0822H         LINE#         10
-  C:0825H         LINE#         12
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 4
 
 
-  C:0825H         LINE#         13
-  C:0825H         LINE#         14
-  C:0828H         LINE#         16
-  C:0837H         LINE#         17
-  C:0837H         LINE#         18
-  C:083CH         LINE#         19
-  C:0846H         LINE#         20
+  C:096EH         LINE#         6
+  C:096EH         LINE#         7
+  C:096EH         LINE#         10
+  C:0971H         LINE#         12
+  C:0971H         LINE#         13
+  C:0971H         LINE#         14
+  C:0974H         LINE#         16
+  C:0983H         LINE#         17
+  C:0983H         LINE#         18
+  C:0988H         LINE#         19
+  C:0992H         LINE#         20
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
   -------         MODULE        SYSTEM
   C:0000H         SYMBOL        _ICE_DUMMY_
   D:0080H         PUBLIC        P0
-  C:08DCH         PUBLIC        initADC
+  C:0A28H         PUBLIC        initADC
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
@@ -204,8 +208,8 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   D:00E8H         PUBLIC        P6
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
-  C:08B8H         PUBLIC        _getADCResult
-  C:089DH         PUBLIC        _delay
+  C:0A04H         PUBLIC        _getADCResult
+  C:09E9H         PUBLIC        _delay
   D:00BDH         PUBLIC        ADC_RES
   D:00B8H         PUBLIC        IP
   B:0098H.1       PUBLIC        TI
@@ -218,7 +222,7 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   D:008EH         PUBLIC        AUXR
   D:00D6H         PUBLIC        T2H
   D:00D7H         PUBLIC        T2L
-  C:08CCH         PUBLIC        initUart
+  C:0A18H         PUBLIC        initUart
   D:009DH         PUBLIC        P1ASF
   D:00D0H         PUBLIC        PSW
   -------         PROC          _DELAY
@@ -226,26 +230,26 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   -------         DO            
   D:0004H         SYMBOL        x
   -------         ENDDO         
-  C:089DH         LINE#         6
-  C:089DH         LINE#         7
-  C:089DH         LINE#         10
-  C:08A7H         LINE#         11
-  C:08A7H         LINE#         12
-  C:08ABH         LINE#         13
-  C:08B7H         LINE#         15
+  C:09E9H         LINE#         6
+  C:09E9H         LINE#         7
+  C:09E9H         LINE#         10
+  C:09F3H         LINE#         11
+  C:09F3H         LINE#         12
+  C:09F7H         LINE#         13
+  C:0A03H         LINE#         15
   -------         ENDPROC       _DELAY
   -------         PROC          INITUART
-  C:08CCH         LINE#         21
-  C:08CCH         LINE#         22
-  C:08CCH         LINE#         23
-  C:08CFH         LINE#         25
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 5
 
 
-  C:08D2H         LINE#         26
-  C:08D5H         LINE#         27
-  C:08D8H         LINE#         28
-  C:08DBH         LINE#         40
+  C:0A18H         LINE#         21
+  C:0A18H         LINE#         22
+  C:0A18H         LINE#         23
+  C:0A1BH         LINE#         25
+  C:0A1EH         LINE#         26
+  C:0A21H         LINE#         27
+  C:0A24H         LINE#         28
+  C:0A27H         LINE#         40
   -------         ENDPROC       INITUART
   -------         PROC          _SENDDATA
   D:0007H         SYMBOL        dat
@@ -257,26 +261,26 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   C:000AH         LINE#         48
   -------         ENDPROC       _SENDDATA
   -------         PROC          INITADC
-  C:08DCH         LINE#         65
-  C:08DCH         LINE#         66
-  C:08DCH         LINE#         67
-  C:08DFH         LINE#         68
-  C:08E2H         LINE#         69
-  C:08E5H         LINE#         70
+  C:0A28H         LINE#         65
+  C:0A28H         LINE#         66
+  C:0A28H         LINE#         67
+  C:0A2BH         LINE#         68
+  C:0A2EH         LINE#         69
+  C:0A31H         LINE#         70
   -------         ENDPROC       INITADC
   -------         PROC          _GETADCRESULT
   D:0007H         SYMBOL        ch
-  C:08B8H         LINE#         74
-  C:08B8H         LINE#         75
-  C:08B8H         LINE#         76
-  C:08BDH         LINE#         77
-  C:08BEH         LINE#         78
-  C:08BFH         LINE#         79
-  C:08C0H         LINE#         80
-  C:08C1H         LINE#         81
-  C:08C6H         LINE#         82
-  C:08C9H         LINE#         84
-  C:08CBH         LINE#         85
+  C:0A04H         LINE#         74
+  C:0A04H         LINE#         75
+  C:0A04H         LINE#         76
+  C:0A09H         LINE#         77
+  C:0A0AH         LINE#         78
+  C:0A0BH         LINE#         79
+  C:0A0CH         LINE#         80
+  C:0A0DH         LINE#         81
+  C:0A12H         LINE#         82
+  C:0A15H         LINE#         84
+  C:0A17H         LINE#         85
   -------         ENDPROC       _GETADCRESULT
   -------         ENDMOD        SYSTEM
 
@@ -294,19 +298,18 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   D:00F8H         PUBLIC        P7
   D:00A8H         PUBLIC        IE
   D:00B8H         PUBLIC        IP
-  C:047CH         PUBLIC        _ledProcess
+  C:0373H         PUBLIC        _ledProcess
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 6
+
+
   D:00D8H         PUBLIC        CCON
-  C:05CBH         PUBLIC        _ledBlink
-  C:06C4H         PUBLIC        _ledPWM
-  C:071DH         PUBLIC        keyProcess
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 6
-
-
-  C:064AH         PUBLIC        ledTimeUpdate
+  C:080EH         PUBLIC        _ledPWM
+  C:0867H         PUBLIC        keyProcess
+  C:0794H         PUBLIC        ledTimeUpdate
   D:0098H         PUBLIC        SCON
   D:0089H         PUBLIC        TMOD
   D:0088H         PUBLIC        TCON
-  C:084EH         PUBLIC        init
+  C:099AH         PUBLIC        init
   X:0002H         PUBLIC        ledMode
   D:008EH         PUBLIC        AUXR
   X:0003H         PUBLIC        ledTime
@@ -314,183 +317,241 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   D:008CH         PUBLIC        TH0
   D:008AH         PUBLIC        TL0
   B:0088H.4       PUBLIC        TR0
-  C:07E7H         PUBLIC        _lightUp
+  C:0696H         PUBLIC        _ledBlink1
+  C:0715H         PUBLIC        _ledBlink2
+  C:0615H         PUBLIC        _ledBlink3
+  C:0933H         PUBLIC        _lightUp
   X:0013H         PUBLIC        pwmTime
   B:00B0H.2       PUBLIC        KEY
   X:001BH         PUBLIC        blinkCounter
   D:00D0H         PUBLIC        PSW
   -------         PROC          INIT
-  C:084EH         LINE#         12
-  C:084EH         LINE#         13
-  C:084EH         LINE#         14
-  C:0851H         LINE#         15
-  C:0854H         LINE#         17
-  C:0856H         LINE#         18
-  C:0859H         LINE#         19
-  C:085CH         LINE#         20
-  C:085EH         LINE#         23
-  C:0861H         LINE#         24
-  C:0864H         LINE#         25
-  C:0866H         LINE#         26
-  C:0869H         LINE#         27
-  C:086BH         LINE#         28
-  C:086DH         LINE#         31
+  C:099AH         LINE#         12
+  C:099AH         LINE#         13
+  C:099AH         LINE#         14
+  C:099DH         LINE#         15
+  C:09A0H         LINE#         17
+  C:09A2H         LINE#         18
+  C:09A5H         LINE#         19
+  C:09A8H         LINE#         20
+  C:09AAH         LINE#         23
+  C:09ADH         LINE#         24
+  C:09B0H         LINE#         25
+  C:09B2H         LINE#         26
+  C:09B5H         LINE#         27
+  C:09B7H         LINE#         28
+  C:09B9H         LINE#         31
   -------         ENDPROC       INIT
   -------         PROC          _LIGHTUP
   X:002CH         SYMBOL        pin
   -------         DO            
   D:0007H         SYMBOL        result
   -------         ENDDO         
-  C:07E7H         LINE#         35
-  C:07EFH         LINE#         36
-  C:07EFH         LINE#         38
-  C:07FCH         LINE#         39
-  C:07FFH         LINE#         40
-  C:0805H         LINE#         41
-  C:0805H         LINE#         42
-  C:0821H         LINE#         43
-  C:0821H         LINE#         44
+  C:0933H         LINE#         35
+  C:093BH         LINE#         36
+  C:093BH         LINE#         38
+  C:0948H         LINE#         39
+  C:094BH         LINE#         40
+  C:0951H         LINE#         41
+  C:0951H         LINE#         42
+  C:096DH         LINE#         43
+  C:096DH         LINE#         44
   -------         ENDPROC       _LIGHTUP
   -------         PROC          _LEDPWM
   D:0007H         SYMBOL        pin
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 7
+
+
   D:0005H         SYMBOL        brightness
-  C:06C4H         LINE#         47
-  C:06C4H         LINE#         48
-  C:06C4H         LINE#         49
-  C:06D1H         LINE#         50
-  C:06E1H         LINE#         51
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 7
-
-
-  C:06E1H         LINE#         52
-  C:06EDH         LINE#         53
-  C:06EDH         LINE#         54
-  C:06FDH         LINE#         55
-  C:06FDH         LINE#         56
-  C:070AH         LINE#         57
-  C:070AH         LINE#         58
-  C:070FH         LINE#         59
-  C:070FH         LINE#         60
-  C:071CH         LINE#         61
-  C:071CH         LINE#         62
+  C:080EH         LINE#         47
+  C:080EH         LINE#         48
+  C:080EH         LINE#         49
+  C:081BH         LINE#         50
+  C:082BH         LINE#         51
+  C:082BH         LINE#         52
+  C:0837H         LINE#         53
+  C:0837H         LINE#         54
+  C:0847H         LINE#         55
+  C:0847H         LINE#         56
+  C:0854H         LINE#         57
+  C:0854H         LINE#         58
+  C:0859H         LINE#         59
+  C:0859H         LINE#         60
+  C:0866H         LINE#         61
+  C:0866H         LINE#         62
   -------         ENDPROC       _LEDPWM
-  -------         PROC          _LEDBLINK
+  -------         PROC          _LEDBLINK1
   D:0004H         SYMBOL        pin
-  C:05CBH         LINE#         65
-  C:05CFH         LINE#         66
-  C:05CFH         LINE#         67
-  C:05E7H         LINE#         68
-  C:05FBH         LINE#         69
-  C:05FBH         LINE#         70
-  C:0609H         LINE#         71
-  C:0609H         LINE#         72
-  C:060FH         LINE#         73
-  C:060FH         LINE#         74
-  C:061EH         LINE#         75
-  C:061EH         LINE#         76
-  C:063BH         LINE#         77
-  C:063BH         LINE#         78
-  C:0649H         LINE#         79
-  C:0649H         LINE#         80
-  -------         ENDPROC       _LEDBLINK
+  C:0696H         LINE#         65
+  C:069AH         LINE#         66
+  C:069AH         LINE#         67
+  C:06B2H         LINE#         68
+  C:06C6H         LINE#         69
+  C:06C6H         LINE#         70
+  C:06D4H         LINE#         71
+  C:06D4H         LINE#         72
+  C:06DAH         LINE#         73
+  C:06DAH         LINE#         74
+  C:06E9H         LINE#         75
+  C:06E9H         LINE#         76
+  C:0706H         LINE#         77
+  C:0706H         LINE#         78
+  C:0714H         LINE#         79
+  C:0714H         LINE#         80
+  -------         ENDPROC       _LEDBLINK1
+  -------         PROC          _LEDBLINK2
+  D:0004H         SYMBOL        pin
+  C:0715H         LINE#         82
+  C:0719H         LINE#         83
+  C:0719H         LINE#         84
+  C:0731H         LINE#         85
+  C:0745H         LINE#         86
+  C:0745H         LINE#         87
+  C:0753H         LINE#         88
+  C:0753H         LINE#         89
+  C:0759H         LINE#         90
+  C:0759H         LINE#         91
+  C:0768H         LINE#         92
+  C:0768H         LINE#         93
+  C:0785H         LINE#         94
+  C:0785H         LINE#         95
+  C:0793H         LINE#         96
+  C:0793H         LINE#         97
+  -------         ENDPROC       _LEDBLINK2
+  -------         PROC          _LEDBLINK3
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 8
+
+
+  D:0004H         SYMBOL        pin
+  C:0615H         LINE#         99
+  C:0619H         LINE#         100
+  C:0619H         LINE#         101
+  C:0631H         LINE#         102
+  C:0646H         LINE#         103
+  C:0646H         LINE#         104
+  C:0655H         LINE#         105
+  C:0655H         LINE#         106
+  C:065BH         LINE#         107
+  C:065BH         LINE#         108
+  C:066AH         LINE#         109
+  C:066AH         LINE#         110
+  C:0687H         LINE#         111
+  C:0687H         LINE#         112
+  C:0695H         LINE#         113
+  C:0695H         LINE#         114
+  -------         ENDPROC       _LEDBLINK3
   -------         PROC          _LEDPROCESS
   X:002CH         SYMBOL        pin
-  C:047CH         LINE#         84
-  C:0481H         LINE#         85
-  C:0481H         LINE#         86
-  C:0495H         LINE#         87
-  C:0495H         LINE#         89
-  C:0495H         LINE#         91
-  C:04B0H         LINE#         92
-  C:04B0H         LINE#         93
-  C:04C7H         LINE#         94
-  C:04C7H         LINE#         95
-  C:04C7H         LINE#         97
-  C:04C7H         LINE#         99
-  C:04DEH         LINE#         100
-  C:04DEH         LINE#         101
-  C:04EBH         LINE#         102
-  C:04EBH         LINE#         103
-  C:04ECH         LINE#         105
-  C:04ECH         LINE#         107
-  C:0503H         LINE#         108
-  C:0503H         LINE#         109
-  C:0508H         LINE#         110
-  C:0508H         LINE#         111
-  C:0508H         LINE#         113
-  C:0508H         LINE#         115
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 8
+  C:0373H         LINE#         118
+  C:0378H         LINE#         119
+  C:0378H         LINE#         120
+  C:039BH         LINE#         121
+  C:039BH         LINE#         123
+  C:039BH         LINE#         125
+  C:03B6H         LINE#         126
+  C:03B6H         LINE#         127
+  C:03CDH         LINE#         128
+  C:03CDH         LINE#         129
+  C:03CDH         LINE#         131
+  C:03CDH         LINE#         133
+  C:03E7H         LINE#         134
+  C:03E7H         LINE#         135
+  C:03F4H         LINE#         136
+  C:03F4H         LINE#         137
+  C:03F5H         LINE#         139
+  C:03F5H         LINE#         141
+  C:040CH         LINE#         142
+  C:040CH         LINE#         143
+  C:0411H         LINE#         144
+  C:0411H         LINE#         145
+  C:0411H         LINE#         146
+  C:0411H         LINE#         148
+  C:0428H         LINE#         149
+  C:0428H         LINE#         150
+  C:042DH         LINE#         151
+  C:042DH         LINE#         152
+  C:042DH         LINE#         153
+  C:042DH         LINE#         155
+  C:0444H         LINE#         156
+  C:0444H         LINE#         157
+  C:0449H         LINE#         158
+  C:0449H         LINE#         159
+  C:0449H         LINE#         161
+  C:0449H         LINE#         163
+  C:0460H         LINE#         164
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 9
 
 
-  C:051FH         LINE#         116
-  C:051FH         LINE#         117
-  C:052BH         LINE#         118
-  C:052CH         LINE#         120
-  C:052CH         LINE#         121
-  C:053EH         LINE#         122
-  C:053EH         LINE#         123
-  C:053EH         LINE#         125
+  C:0460H         LINE#         165
+  C:046CH         LINE#         166
+  C:046DH         LINE#         168
+  C:046DH         LINE#         169
+  C:047FH         LINE#         170
+  C:047FH         LINE#         172
+  C:047FH         LINE#         175
+  C:047FH         LINE#         177
   -------         ENDPROC       _LEDPROCESS
   -------         PROC          KEYPROCESS
   -------         DO            
   X:0000H         SYMBOL        keyTime
   B:0021H.1       SYMBOL        keyLock
   -------         ENDDO         
-  C:071DH         LINE#         128
-  C:071DH         LINE#         129
-  C:071DH         LINE#         132
-  C:0720H         LINE#         133
-  C:0720H         LINE#         134
-  C:072EH         LINE#         135
-  C:0740H         LINE#         136
-  C:0740H         LINE#         137
-  C:0746H         LINE#         138
-  C:074CH         LINE#         139
-  C:074CH         LINE#         140
-  C:074EH         LINE#         141
-  C:074EH         LINE#         142
-  C:0750H         LINE#         143
-  C:0750H         LINE#         144
-  C:0750H         LINE#         145
-  C:075FH         LINE#         146
-  C:075FH         LINE#         147
-  C:0762H         LINE#         148
-  C:0762H         LINE#         149
-  C:0766H         LINE#         150
-  C:0768H         LINE#         151
-  C:0768H         LINE#         152
-  C:0768H         LINE#         153
+  C:0867H         LINE#         180
+  C:0867H         LINE#         181
+  C:0867H         LINE#         184
+  C:086AH         LINE#         185
+  C:086AH         LINE#         186
+  C:0878H         LINE#         187
+  C:088AH         LINE#         188
+  C:088AH         LINE#         189
+  C:0890H         LINE#         190
+  C:0896H         LINE#         191
+  C:0896H         LINE#         192
+  C:0898H         LINE#         193
+  C:089AH         LINE#         194
+  C:089AH         LINE#         195
+  C:089CH         LINE#         196
+  C:089CH         LINE#         197
+  C:089CH         LINE#         198
+  C:08ABH         LINE#         199
+  C:08ABH         LINE#         200
+  C:08AEH         LINE#         201
+  C:08AEH         LINE#         202
+  C:08B2H         LINE#         203
+  C:08B4H         LINE#         204
+  C:08B4H         LINE#         205
+  C:08B4H         LINE#         206
   -------         ENDPROC       KEYPROCESS
   -------         PROC          LEDTIMEUPDATE
   -------         DO            
   D:000FH         SYMBOL        i
   -------         ENDDO         
-  C:064AH         LINE#         155
-  C:0657H         LINE#         158
-  C:0659H         LINE#         159
-  C:0659H         LINE#         160
-  C:066CH         LINE#         161
-  C:066CH         LINE#         162
-  C:067FH         LINE#         163
-  C:0697H         LINE#         164
-  C:0697H         LINE#         165
-  C:06A7H         LINE#         166
-  C:06B4H         LINE#         167
-  C:06B4H         LINE#         168
-  C:06B4H         LINE#         169
-  C:06B9H         LINE#         170
-BL51 BANKED LINKER/LOCATER V6.22                                                      11/09/2013  14:43:00  PAGE 9
+  C:0794H         LINE#         208
+  C:07A1H         LINE#         211
+  C:07A3H         LINE#         212
+  C:07A3H         LINE#         213
+  C:07B6H         LINE#         214
+  C:07B6H         LINE#         215
+  C:07C9H         LINE#         216
+  C:07E1H         LINE#         217
+  C:07E1H         LINE#         218
+  C:07F1H         LINE#         219
+  C:07FEH         LINE#         220
+  C:07FEH         LINE#         221
+  C:07FEH         LINE#         222
+BL51 BANKED LINKER/LOCATER V6.22                                                      11/10/2013  13:25:21  PAGE 10
 
 
+  C:0803H         LINE#         223
   -------         ENDPROC       LEDTIMEUPDATE
   -------         ENDMOD        APP
 
   -------         MODULE        ?C?UIDIV
-  C:0373H         PUBLIC        ?C?UIDIV
+  C:0480H         PUBLIC        ?C?UIDIV
   -------         ENDMOD        ?C?UIDIV
 
   -------         MODULE        ?C?IILDX
-  C:03C8H         PUBLIC        ?C?IILDX
+  C:04D5H         PUBLIC        ?C?IILDX
   -------         ENDMOD        ?C?IILDX
 
   -------         MODULE        PRINTF
@@ -505,35 +566,35 @@ SYMBOL TABLE OF MODULE:  .\Output\LEDInteractiveDesk (?C_STARTUP)
   -------         ENDMOD        PRINTF
 
   -------         MODULE        ?C?CLDPTR
-  C:03DEH         PUBLIC        ?C?CLDPTR
+  C:04EBH         PUBLIC        ?C?CLDPTR
   -------         ENDMOD        ?C?CLDPTR
 
   -------         MODULE        ?C?CLDOPTR
-  C:03F7H         PUBLIC        ?C?CLDOPTR
+  C:0504H         PUBLIC        ?C?CLDOPTR
   -------         ENDMOD        ?C?CLDOPTR
 
   -------         MODULE        ?C?CSTPTR
-  C:0424H         PUBLIC        ?C?CSTPTR
+  C:0531H         PUBLIC        ?C?CSTPTR
   -------         ENDMOD        ?C?CSTPTR
 
   -------         MODULE        ?C?PLDIXDATA
-  C:0436H         PUBLIC        ?C?PLDIXDATA
+  C:0543H         PUBLIC        ?C?PLDIXDATA
   -------         ENDMOD        ?C?PLDIXDATA
 
   -------         MODULE        ?C?PSTXDATA
-  C:044DH         PUBLIC        ?C?PSTXDATA
+  C:055AH         PUBLIC        ?C?PSTXDATA
   -------         ENDMOD        ?C?PSTXDATA
 
   -------         MODULE        ?C?CCASE
-  C:0456H         PUBLIC        ?C?CCASE
+  C:0563H         PUBLIC        ?C?CCASE
   -------         ENDMOD        ?C?CCASE
 
   -------         MODULE        PUTCHAR
-  C:0876H         PUBLIC        _PUTCHAR
+  C:09C2H         PUBLIC        _PUTCHAR
   -------         ENDMOD        PUTCHAR
 
 *** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
     SEGMENT: ?PR?_SENDDATA?SYSTEM
 
-Program Size: data=23.2 xdata=84 code=2283
+Program Size: data=23.2 xdata=84 code=2615
 LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

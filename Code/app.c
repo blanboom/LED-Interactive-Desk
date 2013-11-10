@@ -37,7 +37,7 @@ void lightUp(pin)
 	uint8 result;
 	P1 = 0x01 << pin;
 	result = getADCResult(pin);
-	if (result > 90)
+	if (result > 60)
 	{
 		ledTime[pin] = 1;
 	}
@@ -62,7 +62,7 @@ void ledPWM(uint8 pin, uint8 brightness)
 }
 
 // LED …¡À∏
-void ledBlink(pin)
+void ledBlink1(pin)
 {
 	blinkCounter[pin] = blinkCounter[pin] + 1;
 	if(blinkCounter[pin] == 200)
@@ -74,6 +74,40 @@ void ledBlink(pin)
 		P2 &= 0xfe << pin;
 	}
 	if(blinkCounter[pin] >= 400)
+	{
+		blinkCounter[pin] = 0;
+	}
+}
+// LED …¡À∏
+void ledBlink2(pin)
+{
+	blinkCounter[pin] = blinkCounter[pin] + 1;
+	if(blinkCounter[pin] == 100)
+	{
+		P2 |= 0x01 << pin;
+	}
+	if(blinkCounter[pin] == 124)
+	{
+		P2 &= 0xfe << pin;
+	}
+	if(blinkCounter[pin] >= 200)
+	{
+		blinkCounter[pin] = 0;
+	}
+}
+// LED …¡À∏
+void ledBlink3(pin)
+{
+	blinkCounter[pin] = blinkCounter[pin] + 1;
+	if(blinkCounter[pin] == 400)
+	{
+		P2 |= 0x01 << pin;
+	}
+	if(blinkCounter[pin] == 450)
+	{
+		P2 &= 0xfe << pin;
+	}
+	if(blinkCounter[pin] >= 800)
 	{
 		blinkCounter[pin] = 0;
 	}
@@ -106,13 +140,27 @@ void ledProcess(uint8 pin)
 			// øÏÀŸ…¡À∏
 			if(ledTime[pin] != 0)
 			{
-				ledBlink(pin);
+				ledBlink1(pin);
+			}
+			break;
+	case 3:
+			// …¡À∏
+			if(ledTime[pin] != 0)
+			{
+				ledBlink2(pin);
+			}
+			break;
+	case 4:
+			// …¡À∏
+			if(ledTime[pin] != 0)
+			{
+				ledBlink3(pin);
 			}
 			break;
 			
-	case 3:
+	case 5:
 			//  ÷∑≈…œ»•µ∆√
-			if(ledTime[pin] == 0)
+		    if(ledTime[pin] == 0)
 			{
 				P2 |= 0x01 << pin;
 			}
@@ -120,6 +168,10 @@ void ledProcess(uint8 pin)
 			{
 				P2 &= 0xfe << pin;
 			}
+			
+			break;
+
+			
 	}
 
 }
@@ -138,6 +190,7 @@ void keyProcess()
 			if(ledMode > LED_MODE_NUM - 1)
 			{
 				ledMode = 0;
+				P2 = 0x00;
 			}
 			keyLock = 1;
 		}

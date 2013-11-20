@@ -1,3 +1,5 @@
-## Developing.................. ##
+## LED Interactive Desk ##
 
-> A desk
+Just a LED Desk.
+
+This project is under developing. I will update readme later...

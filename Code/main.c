@@ -5,18 +5,17 @@
 
 int main()
 {
-	uint8 i;
+	uint8 counter;
 	
 	init();
 	
 	while(1)
 	{
 		keyProcess();
-		
-		for(i=0;i<8;i++)
+		for(counter = 0; counter < 8; counter++)
 		{
-			lightUp(i);
-			ledProcess(i);
+			lightUp(counter);
+			ledProcess(counter);
 		}
 	}
 	return 0;

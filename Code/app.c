@@ -7,12 +7,12 @@ uint8 pwmTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // PWM 计时
 uint8 ledMode = 0;      // LED 模式
 uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
 int8 code ledSensitivityAdjust[8] = {0, 0, -20, -20, 0, 0, 0, -20};  //灵敏度校正
-
-uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   
+uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // LED闪烁计时器
+bit sensitivityMode = 0;  // 灵敏度模式， 0 - 夜晚， 1 - 白天
+uint8 sensitivity = SENSITIVITY_NIGHT;   // 灵敏度
 
 void init()
 {
-	initUart();
 	initADC();
 	
 	KEY = !KEY_PRESSED;
@@ -27,9 +27,6 @@ void init()
 	TH0 = T20MS >> 8;
 	TR0 = 1;       // 开始计时
 	ET0 = 1;       // 使能定时器 0 在模式 3 下的中断
-	
-	
-	printf("LED Interactive Desk\nby xiao3d and Blanboom\nhttp://blanboom.org\n");
 }
 
 // 启动 LED
@@ -38,7 +35,7 @@ void lightUp(pin)
 	uint8 result;
 	P1 = 0x01 << pin;
 	result = getADCResult(pin);
-	if (result > (60 + ledSensitivityAdjust[pin]))
+	if (result > (sensitivity + ledSensitivityAdjust[pin]))
 	{
 		ledTime[pin] = 1;
 	}
@@ -62,7 +59,7 @@ void ledPWM(uint8 pin, uint8 brightness)
 	}
 }
 
-// LED 闪烁
+// LED 慢速闪烁
 void ledBlink1(pin)
 {
 	blinkCounter[pin] = blinkCounter[pin] + 1;
@@ -79,7 +76,8 @@ void ledBlink1(pin)
 		blinkCounter[pin] = 0;
 	}
 }
-// LED 闪烁
+
+// LED 快速闪烁
 void ledBlink2(pin)
 {
 	blinkCounter[pin] = blinkCounter[pin] + 1;
@@ -96,23 +94,7 @@ void ledBlink2(pin)
 		blinkCounter[pin] = 0;
 	}
 }
-// LED 闪烁
-void ledBlink3(pin)
-{
-	blinkCounter[pin] = blinkCounter[pin] + 1;
-	if(blinkCounter[pin] == 400)
-	{
-		P2 |= 0x01 << pin;
-	}
-	if(blinkCounter[pin] == 450)
-	{
-		P2 &= 0xfe << pin;
-	}
-	if(blinkCounter[pin] >= 800)
-	{
-		blinkCounter[pin] = 0;
-	}
-}
+
 	
 // LED 处理
 // 到达指定的时间调节 LED 亮度
@@ -130,38 +112,24 @@ void ledProcess(uint8 pin)
 			break;
 			
 	case 1:
-			// 灯亮一定时间后灭
-			if(ledTime[pin] != 0)
-			{
-				P2 |= 0x01 << pin;
-			}
-			break;
-			
-	case 2:
 			// 快速闪烁
 			if(ledTime[pin] != 0)
 			{
 				ledBlink1(pin);
 			}
 			break;
-	case 3:
+			
+	case 2:
 			// 闪烁
 			if(ledTime[pin] != 0)
 			{
 				ledBlink2(pin);
 			}
 			break;
-	case 4:
-			// 闪烁
-			if(ledTime[pin] != 0)
-			{
-				ledBlink3(pin);
-			}
-			break;
-			
-	case 5:
+
+	case 3:
 			// 手放上去灯灭
-		    if(ledTime[pin] == 0)
+		  if(ledTime[pin] == 0)
 			{
 				P2 |= 0x01 << pin;
 			}
@@ -169,12 +137,8 @@ void ledProcess(uint8 pin)
 			{
 				P2 &= 0xfe << pin;
 			}
-			
 			break;
-
-			
 	}
-
 }
 
 // 按键处理
@@ -191,6 +155,18 @@ void keyProcess()
 			if(ledMode > LED_MODE_NUM - 1)
 			{
 				ledMode = 0;
+				
+				// 设置灵敏度
+				sensitivityMode = ~sensitivityMode;
+				if (sensitivityMode == 1)
+				{
+					sensitivity = SENSITIVITY_DAY;
+				}
+				else
+				{
+					sensitivity = SENSITIVITY_NIGHT;
+				}
+				
 				P2 = 0x00;
 			}
 			keyLock = 1;

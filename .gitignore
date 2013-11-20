@@ -233,4 +233,7 @@ JLinkLog.txt
 *.__i  
 *.htm  
 
-/Output/
+Output/
+
+#Altium Designer
+Hardware/History/

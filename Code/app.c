@@ -6,7 +6,7 @@
 uint8 pwmTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // PWM 计时
 uint8 ledMode = 0;      // LED 模式
 uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
-int8 code ledSensitivityAdjust[8] = {0, 0, -20, -20, 0, 0, 0, -20};  //灵敏度校正
+int8 code ledSensitivityAdjust[8] = {0, 0, 0, 0, 0, 0, 0, 0};  //灵敏度校正
 uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // LED闪烁计时器
 bit sensitivityMode = 0;  // 灵敏度模式， 0 - 夜晚， 1 - 白天
 uint8 sensitivity = SENSITIVITY_NIGHT;   // 灵敏度
@@ -102,7 +102,6 @@ void ledProcess(uint8 pin)
 {
 	switch (ledMode)
 	{		
-		
 	case 0 :
 			// 渐变
 			if(ledTime[pin] != 0)

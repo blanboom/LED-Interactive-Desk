@@ -1,4 +1,4 @@
-C51 COMPILER V9.51   APP                                                                   11/20/2013 20:14:53 PAGE 1   
+C51 COMPILER V9.51   APP                                                                   11/20/2013 20:22:32 PAGE 1   
 
 
 C51 COMPILER V9.51, COMPILATION OF MODULE APP
@@ -16,7 +16,7 @@ line level    source
    6          uint8 pwmTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // PWM 计时
    7          uint8 ledMode = 0;      // LED 模式
    8          uint16 ledTime[8] = {0, 0, 0, 0, 0, 0, 0, 0};    // LED 时间，0 为未启动
-   9          int8 code ledSensitivityAdjust[8] = {0, 0, -20, -20, 0, 0, 0, -20};  //灵敏度校正
+   9          int8 code ledSensitivityAdjust[8] = {0, 0, 0, 0, 0, 0, 0, 0};  //灵敏度校正
   10          uint16 blinkCounter[8] = {0, 0, 0, 0, 0, 0, 0, 0};   // LED闪烁计时器
   11          bit sensitivityMode = 0;  // 灵敏度模式， 0 - 夜晚， 1 - 白天
   12          uint8 sensitivity = SENSITIVITY_NIGHT;   // 灵敏度
@@ -62,7 +62,7 @@ line level    source
   52   1        if(pwmTime[pin] <= brightness)
   53   1        {
   54   2          P2 |= 0x01 << pin;
-C51 COMPILER V9.51   APP                                                                   11/20/2013 20:14:53 PAGE 2   
+C51 COMPILER V9.51   APP                                                                   11/20/2013 20:22:32 PAGE 2   
 
   55   2        }
   56   1        if(pwmTime[pin] > brightness)
@@ -115,106 +115,105 @@ line level    source
 *** WARNING C235 IN LINE 102 OF Code\app.c: parameter 1: different types
  103   1        switch (ledMode)
  104   1        {   
- 105   2          
- 106   2        case 0 :
- 107   2            // 渐变
- 108   2            if(ledTime[pin] != 0)
- 109   2            {
- 110   3              ledPWM(pin, (260-ledTime[pin]) / 13);
- 111   3            }
- 112   2            break;
- 113   2            
- 114   2        case 1:
- 115   2            // 快速闪烁
-C51 COMPILER V9.51   APP                                                                   11/20/2013 20:14:53 PAGE 3   
+ 105   2        case 0 :
+ 106   2            // 渐变
+ 107   2            if(ledTime[pin] != 0)
+ 108   2            {
+ 109   3              ledPWM(pin, (260-ledTime[pin]) / 13);
+ 110   3            }
+ 111   2            break;
+ 112   2            
+ 113   2        case 1:
+ 114   2            // 快速闪烁
+ 115   2            if(ledTime[pin] != 0)
+C51 COMPILER V9.51   APP                                                                   11/20/2013 20:22:32 PAGE 3   
 
- 116   2            if(ledTime[pin] != 0)
- 117   2            {
- 118   3              ledBlink1(pin);
- 119   3            }
- 120   2            break;
- 121   2            
- 122   2        case 2:
- 123   2            // 闪烁
- 124   2            if(ledTime[pin] != 0)
- 125   2            {
- 126   3              ledBlink2(pin);
- 127   3            }
- 128   2            break;
- 129   2      
- 130   2        case 3:
- 131   2            // 手放上去灯灭
- 132   2            if(ledTime[pin] == 0)
- 133   2            {
- 134   3              P2 |= 0x01 << pin;
- 135   3            }
- 136   2            else
- 137   2            {
- 138   3              P2 &= 0xfe << pin;
- 139   3            }
- 140   2            break;
- 141   2        }
- 142   1      }
- 143          
- 144          // 按键处理
- 145          void keyProcess()
- 146          {
- 147   1        static uint16 keyTime = 0;
- 148   1        static bit keyLock = 0;
- 149   1        if(KEY == KEY_PRESSED)
- 150   1        {
- 151   2          keyTime++;
- 152   2          if(keyTime >= 1000 && keyLock == 0)
- 153   2          {
- 154   3            ledMode++;
- 155   3            if(ledMode > LED_MODE_NUM - 1)
- 156   3            {
- 157   4              ledMode = 0;
- 158   4              
- 159   4              // 设置灵敏度
- 160   4              sensitivityMode = ~sensitivityMode;
- 161   4              if (sensitivityMode == 1)
- 162   4              {
- 163   5                sensitivity = SENSITIVITY_DAY;
- 164   5              }
- 165   4              else
- 166   4              {
- 167   5                sensitivity = SENSITIVITY_NIGHT;
- 168   5              }
- 169   4              
- 170   4              P2 = 0x00;
- 171   4            }
- 172   3            keyLock = 1;
- 173   3          }
- 174   2        }
- 175   1        if(keyTime > 2000)
- 176   1        {
- 177   2          if(KEY != KEY_PRESSED)
-C51 COMPILER V9.51   APP                                                                   11/20/2013 20:14:53 PAGE 4   
+ 116   2            {
+ 117   3              ledBlink1(pin);
+ 118   3            }
+ 119   2            break;
+ 120   2            
+ 121   2        case 2:
+ 122   2            // 闪烁
+ 123   2            if(ledTime[pin] != 0)
+ 124   2            {
+ 125   3              ledBlink2(pin);
+ 126   3            }
+ 127   2            break;
+ 128   2      
+ 129   2        case 3:
+ 130   2            // 手放上去灯灭
+ 131   2            if(ledTime[pin] == 0)
+ 132   2            {
+ 133   3              P2 |= 0x01 << pin;
+ 134   3            }
+ 135   2            else
+ 136   2            {
+ 137   3              P2 &= 0xfe << pin;
+ 138   3            }
+ 139   2            break;
+ 140   2        }
+ 141   1      }
+ 142          
+ 143          // 按键处理
+ 144          void keyProcess()
+ 145          {
+ 146   1        static uint16 keyTime = 0;
+ 147   1        static bit keyLock = 0;
+ 148   1        if(KEY == KEY_PRESSED)
+ 149   1        {
+ 150   2          keyTime++;
+ 151   2          if(keyTime >= 1000 && keyLock == 0)
+ 152   2          {
+ 153   3            ledMode++;
+ 154   3            if(ledMode > LED_MODE_NUM - 1)
+ 155   3            {
+ 156   4              ledMode = 0;
+ 157   4              
+ 158   4              // 设置灵敏度
+ 159   4              sensitivityMode = ~sensitivityMode;
+ 160   4              if (sensitivityMode == 1)
+ 161   4              {
+ 162   5                sensitivity = SENSITIVITY_DAY;
+ 163   5              }
+ 164   4              else
+ 165   4              {
+ 166   5                sensitivity = SENSITIVITY_NIGHT;
+ 167   5              }
+ 168   4              
+ 169   4              P2 = 0x00;
+ 170   4            }
+ 171   3            keyLock = 1;
+ 172   3          }
+ 173   2        }
+ 174   1        if(keyTime > 2000)
+ 175   1        {
+ 176   2          if(KEY != KEY_PRESSED)
+ 177   2          {
+C51 COMPILER V9.51   APP                                                                   11/20/2013 20:22:32 PAGE 4   
 
- 178   2          {
- 179   3            keyTime = 0;
- 180   3            keyLock = 0;
- 181   3          }
- 182   2        }
- 183   1      }
- 184            
- 185          void ledTimeUpdate() interrupt 1 using 1
- 186          {
- 187   1        uint8 i;
- 188   1        for(i = 0; i <= 7; i++)
- 189   1        {
- 190   2          if(ledTime[i] != 0)
- 191   2          {
- 192   3            ledTime[i] = ledTime[i] + 1;
- 193   3            if(ledTime[i] >= 260)
- 194   3            {
- 195   4              ledTime[i] = 0;
- 196   4              P2 &= 0xfe << i;
- 197   4            }
- 198   3          }
- 199   2        }
- 200   1      }
+ 178   3            keyTime = 0;
+ 179   3            keyLock = 0;
+ 180   3          }
+ 181   2        }
+ 182   1      }
+ 183            
+ 184          void ledTimeUpdate() interrupt 1 using 1
+ 185          {
+ 186   1        uint8 i;
+ 187   1        for(i = 0; i <= 7; i++)
+ 188   1        {
+ 189   2          if(ledTime[i] != 0)
+ 190   2          {
+ 191   3            ledTime[i] = ledTime[i] + 1;
+ 192   3            if(ledTime[i] >= 260)
+ 193   3            {
+ 194   4              ledTime[i] = 0;
+ 195   4              P2 &= 0xfe << i;
+ 196   4            }
+ 197   3          }
+ 198   2        }
+ 199   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE

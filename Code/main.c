@@ -1,3 +1,7 @@
+// LED-Interactive-Desk
+// Based on STC15F408AD
+// Designed by xiao3d and blanboom
+
 #include <intrins.h>
 #include <stdio.h>
 #include "stc15.h"

@@ -2,7 +2,7 @@
 #include "stc15.h"
 #include <intrins.h>
 
-// 软件延时
+// Software delay
 void delay(uint16 n)
 {
 	uint16 x;
@@ -15,8 +15,8 @@ void delay(uint16 n)
 }
 
 
-//////////////////////////////////////////////////////////////
-//  ADC
+///////////////////////////////////////////////////////
+// ADC
 
 /*Define ADC operation const for ADC_CONTR*/
 #define ADC_POWER 0x80 //ADC power control bit
@@ -27,16 +27,16 @@ void delay(uint16 n)
 #define ADC_SPEEDH 0x40 //180 clocks
 #define ADC_SPEEDHH 0x60 //90 clocks
 
-// 初始化 ADC
+// initialize ADC
 void initADC()
 {
-	P1ASF = 0xff;      // 设置 P1 口为 AD 口
-	ADC_RES = 0;       // 清除结果寄存器
+	P1ASF = 0xff;      // Make P1 ADC Port
+	ADC_RES = 0;       // Reset ADC Result Register
 	ADC_CONTR = ADC_POWER | ADC_SPEEDLL;
-	delay(2);          // ADC 上电并延时
+	delay(2);
 }
 
-// 读取 ADC 结果
+// read ADC result
 uint8 getADCResult(uint8 ch)
 {
 	ADC_CONTR = ADC_POWER | ADC_SPEEDLL | ch | ADC_START;
@@ -44,8 +44,8 @@ uint8 getADCResult(uint8 ch)
 	_nop_();
 	_nop_();
 	_nop_();
-	while(!(ADC_CONTR & ADC_FLAG));   // 等待 ADC 转换完成
-	ADC_CONTR &= ~ADC_FLAG;           // 关闭 ADC
+	while(!(ADC_CONTR & ADC_FLAG));   // waiting for the completion of convension
+	ADC_CONTR &= ~ADC_FLAG;           // turn off ADC
 	
-	return ADC_RES;                   // 返回 ADC 结果
+	return ADC_RES;
 }
